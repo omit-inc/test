@@ -1,8 +1,25 @@
+@import './common.css'
+
+/*変数*/
+$mainColor: #002e73
+$subColor: #1f5fa9
+$blue: #3bbfce
+
+/*rem自動*/
+=rem($size)
+  font-size: $size + px
+  font-size: $size / 10 * 1rem
+
 .box
     .item
+        background:
+            color: $subColor
+        color: $mainColor
         font:
             size: 20px
             weight: bold
             margin: 10px
     .test
         padding: 10px
+        +rem(15)
+        color: darken($mainColor, 50%)
